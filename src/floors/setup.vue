@@ -5,14 +5,14 @@
       增加 1修改msg
     </button>
   </view>
-  
 </template>
-<script setup="props" lang="ts">
-  import { ref } from 'vue'
 
-  const props = {
+<script setup lang="ts">
+  import { ref, defineProps } from 'vue'
+
+  const props = defineProps({
       msg: String,
-    }
+})
 
   const count = ref(0)
   const info = ref(props.msg)
